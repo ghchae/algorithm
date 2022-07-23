@@ -1,19 +1,19 @@
 package com.conference.test;
 
+import com.conference.MainProceed;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class Solution {
-    public static void main(String[] args) {
-        testOrDefault();/* java8에서 제공하는 ordDefault메소드를 이해하기 위한 테스트*/
-        String[] part = {"en", "en", "ko", "te", "ce"};
-
-        String[] comp = {"en", "en", "te", "ce"};
-        System.out.println(solution(part, comp));
+public class 완주하지못한선수 implements MainProceed {
+    @Override
+    public String solution() {
+        return null;
     }
 
-    public static String solution(String[] participant, String[] completion) {
+    @Override
+    public String solution(String[] arg1, String[] arg2) {
         /* participant = 참여한선수들(n명), completion = 완주한 선수들(n-1명), 1~ 100000명 */
         String answer = "";
 
@@ -25,14 +25,14 @@ public class Solution {
         */
 
         HashMap<String, Integer> map = new HashMap<>();
-        for (String personName : participant) {
+        for (String personName : arg1) {
             /* participant 배열의 0 부터 ~ , 값을 personName 으로 */
 
             /* psersonName 이라는 키값이 존재하면 default + 1 , 아니면 default값을 넣는다. */
             map.put(personName, map.getOrDefault(personName, 0) + 1);
         }
 
-        for (String personName : completion) {
+        for (String personName : arg2) {
             /* 완주목록에 있는 이름이 , 참가자목록에 존재하면 값을 - 1*/
             map.put(personName, map.get(personName) - 1);
         }
@@ -46,15 +46,5 @@ public class Solution {
             }
         }
         return answer;
-    }
-
-    public static void testOrDefault() {
-        String[] testCode = {"le", "ko", "ko", "en"};
-        HashMap<String, Integer> testMap = new HashMap<>();
-
-        for (String key : testCode) {
-            testMap.put(key, testMap.getOrDefault(key, 0) + 1);
-        }
-        System.out.println("result : " + testMap);
     }
 }
