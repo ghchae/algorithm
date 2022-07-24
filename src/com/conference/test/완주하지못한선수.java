@@ -13,6 +13,11 @@ public class 완주하지못한선수 implements MainProceed {
     }
 
     @Override
+    public String solution(String[] arg1) {
+        return null;
+    }
+
+    @Override
     public String solution(String[] arg1, String[] arg2) {
         /* participant = 참여한선수들(n명), completion = 완주한 선수들(n-1명), 1~ 100000명 */
         String answer = "";
