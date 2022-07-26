@@ -3,3 +3,4 @@ https://techblog.woowahan.com/2597/
 
 #### Effective Java ####
 ### 1. 클래스와 멤버의 접근성을 최소화하라 ###
+### 2. public 클래스에서는 public 접근이아닌 메서드로 접근해라 ###
