@@ -1,5 +1,6 @@
 package com.conference;
 
+import com.conference.date_220728.ChangeStringToNumber;
 import com.conference.test.완주하지못한선수;
 
 public class Main {
@@ -25,5 +26,11 @@ public class Main {
 
             추상화를 하면 뭐가좋냐 ? 이걸 이펙티브자바를 보면서 공부하자!!!!
         */
+
+        ChangeStringToNumber cst = new ChangeStringToNumber();
+        int result = cst.solution("1twothree4three");
+        System.out.println(result);
+
+        System.out.println("test1test2".replace("test", "3"));
     }
 }
